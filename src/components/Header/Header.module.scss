@@ -1,0 +1,46 @@
+@import '../../styles/mixin';
+
+.header {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 16px;
+    background-color: var(--color-background-primary);
+    transition: background-color 0.3s, transform 0.2s;
+
+    @include tablet {
+        padding: 16px 24px;
+    }
+
+    @include desktop {
+        padding: 16px 144px;
+    }
+
+    &_fixed {
+        position: fixed;
+        top: -64px;
+        transform: translateY(0);
+    }
+
+    &_show {
+        transform: translateY(56px);
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 48px;
+    }
+
+    &__logo {
+        @include tablet {
+            width: 154px;
+            height: 44px;
+        }
+    }
+}

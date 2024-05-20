@@ -1,0 +1,36 @@
+:root {
+    --color-background-primary: rgba(255, 255, 255, 1);
+    --color-background-secondary: rgba(245, 245, 245, 1);
+    --color-white: rgba(255, 255, 255, 1);
+    --color-black: rgba(0, 0, 0, 1);
+
+    --color-text-primary: rgba(39, 38, 44, 1);
+    --color-text-secondary: rgba(39, 38, 44, 0.72);
+    --color-text-primary-invert: rgba(255, 255, 255, 1);
+    --color-text-secondary-invert: rgba(255, 255, 255, 1);
+    --color-text-third: rgba(39, 38, 44, 0.56);
+
+    --color-accent-500: rgba(39, 191, 171, 1);
+    --color-accent-100: rgba(213, 246, 242, 1);
+    --color-accent-300: rgba(128, 229, 216, 1);
+    --color-accent-600: rgba(35, 169, 151, 1);
+    --color-accent-700: rgba(26, 127, 114, 1);
+    --color-link-500: rgba(17, 130, 187, 1);
+    --color-link-700: rgba(12, 98, 141, 1);
+
+    --color-success-500: rgba(30, 174, 83, 1);
+    --color-success-600: rgba(27, 152, 73, 1);
+    --color-success-700: rgba(23, 130, 62, 1);
+    --color-error-500: rgba(229, 24, 24, 1);
+    --color-error-600: rgba(207, 23, 23, 1);
+    --color-error-700: rgba(184, 20, 20, 1);
+    --color-danger-500: rgba(235, 163, 0, 1);
+    --color-danger-600: rgba(209, 146, 0, 1);
+    --color-danger-700: rgba(184, 129, 0, 1);
+
+    --color-darkner-4: rgba(0, 0, 0, 0.04);
+    --color-darkner-8: rgba(0, 0, 0, 0.08);
+    --color-darkner-16: rgba(0, 0, 0, 0.16);
+    --color-darkner-24: rgba(0, 0, 0, 0.24);
+    --color-darkner-48: rgba(0, 0, 0, 0.48);
+}

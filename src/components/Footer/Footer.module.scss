@@ -1,0 +1,25 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 16px;
+    background-color: var(--color-black);
+
+    &__logo-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__logo {
+        width: 154px;
+        height: 44px;
+    }
+
+    &__company {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--color-text-primary-invert);
+    }
+}

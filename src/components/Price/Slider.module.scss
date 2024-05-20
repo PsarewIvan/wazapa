@@ -1,0 +1,19 @@
+.slider {
+    &__tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+
+    &__price {
+        display: block;
+        width: 100%;
+        text-align: center;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 84px;
+        letter-spacing: -0.04em;
+    }
+}

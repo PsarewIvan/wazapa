@@ -1,0 +1,30 @@
+@mixin hover {
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+            @content;
+        }
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1439.98px) {
+        @content;
+    }
+}
+
+@mixin visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}

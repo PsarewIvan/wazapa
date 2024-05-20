@@ -1,0 +1,82 @@
+.wrapper {
+    position: relative;
+
+    &_width-auto {
+        width: max-content;
+    }
+
+    &_width-max {
+        width: 100%;
+    }
+}
+
+.input {
+    width: 100%;
+    height: 56px;
+    border-radius: 16px;
+    border: 2px solid var(--color-darkner-16);
+    padding: 16px;
+    background-color: color(--color-white);
+    color: inherit;
+
+    &::placeholder {
+        font-weight: 400;
+        color: var(--color-text-third);
+    }
+
+    &:hover {
+        border-color: var(--color-darkner-48);
+    }
+
+    &:focus {
+        outline: none;
+        border-color: var(--color-accent-500);
+    }
+
+    &_error {
+        border-color: var(--color-error-500);
+    }
+
+    &_full {
+        padding-right: 40px;
+    }
+}
+
+.error {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transform: translateY(100%);
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-error-500);
+}
+
+.cross-button {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+
+    &:hover {
+        outline: none;
+
+        svg path {
+            fill: var(--color-accent-600);
+        }
+    }
+}
+
+.cross-icon {
+    width: 10.5px;
+    height: 10.5px;
+}
