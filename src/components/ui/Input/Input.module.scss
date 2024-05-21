@@ -43,10 +43,6 @@
 }
 
 .error {
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    transform: translateY(100%);
     width: 100%;
     font-size: 14px;
     line-height: 20px;
@@ -55,9 +51,8 @@
 
 .cross-button {
     position: absolute;
-    top: 50%;
+    top: 20px;
     right: 20px;
-    transform: translateY(-50%);
     width: 16px;
     height: 16px;
     display: flex;

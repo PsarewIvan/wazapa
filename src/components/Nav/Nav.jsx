@@ -5,7 +5,7 @@ import Phone from '../ui/Phone';
 import { EMAIL } from '../../constants';
 import styles from './Nav.module.scss';
 
-function Nav({ invert, onClick }) {
+function Nav({ className, invert, onClick }) {
     const handleLinkClick = useCallback(() => {
         if (onClick) {
             onClick();
@@ -14,9 +14,13 @@ function Nav({ invert, onClick }) {
 
     return (
         <nav
-            className={classNames(styles['nav'], {
-                [styles['nav_invert']]: invert,
-            })}
+            className={classNames(
+                styles['nav'],
+                {
+                    [styles['nav_invert']]: invert,
+                },
+                className
+            )}
         >
             <div
                 className={classNames(styles['nav__link-list'], {

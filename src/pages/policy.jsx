@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import { EMAIL, EMAIL_HELLO } from '@/constants';
+import styles from '../styles/Pages.module.scss';
 
 function Policy() {
     return (
-        <div>
-            <div>
+        <div className={styles['main']}>
+            <div className={styles['nav']}>
                 <Link href="/">На главную</Link>
                 <span>/</span>
                 <span>Политика конфиденциальности</span>
@@ -192,7 +193,7 @@ function Policy() {
                 </a>
                 .
             </p>
-            <div>
+            <div className={styles['contact']}>
                 <p>По всем вопросам свяжитесь с нами:</p>
                 <a
                     href={`mailto:${EMAIL_HELLO}`}

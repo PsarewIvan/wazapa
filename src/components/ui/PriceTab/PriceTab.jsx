@@ -15,7 +15,11 @@ function PriceTab({ children, discount, size = 'm', selected, onClick }) {
             <span className={styles['button__content']}>
                 <span className={styles['button__children']}>{children}</span>
                 {discount && (
-                    <span className={styles['button__discount']}>
+                    <span
+                        className={classNames(styles['button__discount'], {
+                            [styles['button__discount_selected']]: selected,
+                        })}
+                    >
                         {discount}
                     </span>
                 )}

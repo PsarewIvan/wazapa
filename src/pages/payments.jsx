@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
+import { EMAIL_HELLO } from '@/constants';
+import styles from '../styles/Pages.module.scss';
 
 function Payments() {
     return (
-        <div>
-            <div>
+        <div className={styles['main']}>
+            <div className={styles['nav']}>
                 <Link href="/">На главную</Link>
                 <span>/</span>
                 <span>Реквизиты</span>
@@ -17,6 +19,17 @@ function Payments() {
             <p>БИК 044525593,</p>
             <p>к/с 30101810200000000593 в ГУ Банка России по ЦФО.</p>
             <p>Адрес: г. Москва, Береговой проезд, д. 5а, корп. 5</p>
+
+            <div className={styles['contact']}>
+                <p>По всем вопросам свяжитесь с нами:</p>
+                <a
+                    href={`mailto:${EMAIL_HELLO}`}
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    {EMAIL_HELLO}
+                </a>
+            </div>
         </div>
     );
 }

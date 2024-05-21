@@ -1,17 +1,37 @@
+@import '../../styles/mixin';
+
 .promo {
     display: flex;
     flex-direction: column;
     padding: 16px 0;
 
+    @include tablet {
+        padding: 24px 0;
+    }
+
+    @include desktop {
+        flex-direction: row;
+        padding: 52px 0;
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
         margin-bottom: 24px;
+
+        @include desktop {
+            width: 576px;
+            flex-shrink: 0;
+        }
     }
 
     &__text {
         margin: 0 0 12px;
         color: var(--color-text-secondary);
+
+        @include tablet {
+            font-weight: 500;
+        }
     }
 
     &__header {
@@ -19,6 +39,16 @@
         font-weight: 700;
         font-size: 28px;
         line-height: 36px;
+
+        @include tablet {
+            font-size: 44px;
+            line-height: 56px;
+            letter-spacing: -0.02em;
+        }
+
+        @include desktop {
+            margin-bottom: 48px;
+        }
 
         span {
             color: var(--color-accent-700);
@@ -30,6 +60,15 @@
         font-weight: 500;
         font-size: 20px;
         line-height: 28px;
+
+        @include tablet {
+            font-size: 24px;
+            line-height: 32px;
+        }
+
+        @include desktop {
+            margin-bottom: 48px;
+        }
 
         span {
             color: var(--color-accent-700);
@@ -50,7 +89,17 @@
     &__image-wrapper {
         position: relative;
         width: 100%;
-        aspect-ratio: 328 / 247;
+        aspect-ratio: 1424 / 978;
+
+        @include tablet {
+            order: -1;
+            margin-bottom: 24px;
+        }
+
+        @include desktop {
+            order: 0;
+            margin-right: -125px;
+        }
     }
 
     &__image {

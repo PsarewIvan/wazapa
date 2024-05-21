@@ -6,7 +6,7 @@ import Button from '../ui/Button';
 import Nav from '../Nav';
 import styles from './MobileMenu.module.scss';
 
-function MobileMenu({ isOpen, onClose }) {
+function MobileMenu({ isOpen, onClose, onLoginClick }) {
     return (
         <div
             className={classNames(styles['menu'], {
@@ -19,7 +19,12 @@ function MobileMenu({ isOpen, onClose }) {
             </div>
             <Nav onClick={onClose} />
             <div className={styles['menu__button-wrapper']}>
-                <Button size="l" theme="secondary" width="max">
+                <Button
+                    size="l"
+                    theme="secondary"
+                    width="max"
+                    onClick={onLoginClick}
+                >
                     Войти
                 </Button>
             </div>

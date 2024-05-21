@@ -1,0 +1,20 @@
+@import '../../styles/mixin';
+
+.success {
+    &__text {
+        margin: 0 0 24px;
+
+        @include tablet {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    &__input {
+        margin-bottom: 24px;
+    }
+
+    &__button-wrapper {
+        width: 160px;
+    }
+}

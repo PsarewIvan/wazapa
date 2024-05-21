@@ -10,6 +10,7 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Rubik', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -17,18 +18,30 @@ body {
     color: var(--color-text-primary);
 }
 
+#__next {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 button {
     cursor: pointer;
 }
 
 .main {
-    padding: 64px 16px 0;
+    position: relative;
+    margin-top: 64px;
+    padding: 0 16px 0;
 
     @include tablet {
-        padding: 16px 24px;
+        max-width: 1152px;
+        margin-top: 88px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0 24px 0;
     }
 
     @include desktop {
-        padding: 16px 144px;
+        padding: 0;
     }
 }

@@ -20,38 +20,40 @@ function Crm() {
 
     return (
         <section className={styles['crm']}>
-            <h2 className={styles['crm__header']}>
-                Пиши прямо <br /> из{' '}
-                <button
-                    className={classNames(styles['crm__header-button'], {
-                        [styles['crm__header-button_active']]:
-                            image === BITRIX_IMAGE,
-                    })}
-                    type="button"
-                    onClick={handleBitrixClick}
-                >
-                    Битрикс 24
-                </button>{' '}
-                и{' '}
-                <button
-                    className={classNames(styles['crm__header-button'], {
-                        [styles['crm__header-button_active']]:
-                            image === AMO_IMAGE,
-                    })}
-                    type="button"
-                    onClick={handleAmoClick}
-                >
-                    amoCRM
-                </button>
-            </h2>
-            <p className={styles['crm__promo']}>{TEXT.promo}</p>
-            <ul className={styles['crm__list']}>
-                {Object.values(TEXT.list).map((value) => (
-                    <li className={styles['crm__list-item']} key={value}>
-                        {value}
-                    </li>
-                ))}
-            </ul>
+            <div className={styles['crm__content']}>
+                <h2 className={styles['crm__header']}>
+                    Пиши прямо <br /> из{' '}
+                    <button
+                        className={classNames(styles['crm__header-button'], {
+                            [styles['crm__header-button_active']]:
+                                image === BITRIX_IMAGE,
+                        })}
+                        type="button"
+                        onClick={handleBitrixClick}
+                    >
+                        Битрикс 24
+                    </button>{' '}
+                    и{' '}
+                    <button
+                        className={classNames(styles['crm__header-button'], {
+                            [styles['crm__header-button_active']]:
+                                image === AMO_IMAGE,
+                        })}
+                        type="button"
+                        onClick={handleAmoClick}
+                    >
+                        amoCRM
+                    </button>
+                </h2>
+                <p className={styles['crm__promo']}>{TEXT.promo}</p>
+                <ul className={styles['crm__list']}>
+                    {Object.values(TEXT.list).map((value) => (
+                        <li className={styles['crm__list-item']} key={value}>
+                            {value}
+                        </li>
+                    ))}
+                </ul>
+            </div>
             <div className={styles['crm__image-wrapper-border']}>
                 <div className={styles['crm__image-wrapper']}>
                     <Image

@@ -1,10 +1,25 @@
+@import '../../styles/mixin';
+
 .nav {
     display: flex;
     flex-direction: column;
     gap: 48px;
 
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
     &_invert {
         gap: 24px;
+
+        @include tablet {
+            gap: 48px;
+        }
+
+        @include desktop {
+            gap: 96px;
+        }
     }
 
     &__link-list {
@@ -14,6 +29,11 @@
 
         &_invert {
             gap: 12px;
+
+            @include desktop {
+                flex-direction: row;
+                gap: 96px;
+            }
 
             .nav__link-block {
                 gap: 12px;
@@ -25,6 +45,10 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
+
+        @include desktop {
+            // flex-direction: row;
+        }
     }
 
     &__link {
@@ -53,6 +77,11 @@
 
         &_invert {
             color: var(--color-text-primary-invert);
+
+            @include tablet {
+                font-size: 16px;
+                line-height: 24px;
+            }
         }
     }
 

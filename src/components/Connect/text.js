@@ -1,10 +1,8 @@
 export const TEXT = {
     header: (
         <>
-            Подключайте
-            <br />
-            Wazapa PRO
-            <br />
+            Подключайте <br />
+            Wazapa PRO <br />
             <span>бесплатно</span>
         </>
     ),

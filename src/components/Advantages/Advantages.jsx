@@ -9,7 +9,7 @@ function Advantages() {
             <h2 className={styles['adv__header']}>{TEXT.header}</h2>
             <ul className={styles['list']}>
                 {Object.values(TEXT.list).map((item) => (
-                    <li className={styles['list__item']} key={item.header}>
+                    <li className={styles['list__item']} key={item.id}>
                         <div className={styles['list__image-wrapper']}>
                             <Image
                                 className={styles['list__image']}

@@ -1,16 +1,23 @@
 import React, { useCallback, useState } from 'react';
 import Link from 'next/link';
+import ReCAPTCHA from 'react-google-recaptcha';
 import Input from '../ui/Input/Input';
 import Checkbox from '../ui/Checkbox';
 import Button from '../ui/Button';
 import IconButton from '../ui/IconButton';
+import Success from './Success';
 import styles from './ConnectForm.module.scss';
 
-function ConnectForm({ onClose }) {
+const siteKey = process.env.RE_CAPTCHA_SITE_KEY;
+
+function ConnectForm({ discountTitle, onClose }) {
     const [name, setName] = useState('');
     const [tel, setTel] = useState('');
     const [email, setEmail] = useState('');
     const [policy, setPolicy] = useState(false);
+    const [isCaptcha, setIsCaptcha] = useState(false);
+    const [hasErrorTel, setErrorTel] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
 
     const handleNameChange = useCallback((value) => {
         setName(value);
@@ -32,57 +39,119 @@ function ConnectForm({ onClose }) {
         //
     }, []);
 
+    const handleReCaptchaChange = useCallback((value) => {
+        setIsCaptcha(Boolean(value));
+    }, []);
+
+    const handleTelFocus = useCallback(() => {
+        if (!tel.includes('_')) {
+            setErrorTel(false);
+        }
+    }, [tel]);
+
+    const handleTelBlur = useCallback(() => {
+        if (tel.includes('_')) {
+            setErrorTel(true);
+        } else {
+            setErrorTel(false);
+        }
+    }, [tel]);
+
+    const handleReset = useCallback(() => {
+        setName('');
+        setTel('');
+        setEmail('');
+        setPolicy(false);
+        setIsCaptcha(false);
+        setErrorTel(false);
+        setIsSuccess(false);
+    }, []);
+
+    const title = discountTitle
+        ? 'Узнать о действующих акциях и скидках'
+        : 'Подключиться бесплатно';
+
     return (
-        <div className={styles['connect-form']}>
-            <div className={styles['connect-form__content']}>
-                <h3 className={styles['connect-form__header']}>
-                    Подключиться бесплатно
-                </h3>
-                <p className={styles['connect-form__text']}>
-                    Укажите ваш номер телефона и мы свяжемся с Вами в ближайшее
-                    время
-                </p>
-                <div className={styles['connect-form__inputs']}>
-                    <Input
-                        placeholder="Ваше имя"
-                        value={name}
-                        onChange={handleNameChange}
-                    />
-                    <Input
-                        type="tel"
-                        placeholder="+7"
-                        value={tel}
-                        onChange={handleTelChange}
-                    />
-                    <Input
-                        type="email"
-                        placeholder="Ваш email"
-                        value={email}
-                        onChange={handleEmailChange}
-                    />
+        <>
+            <div className={styles['connect-form__overlay']} />
+            <div className={styles['connect-form']}>
+                <div className={styles['connect-form__content']}>
+                    <h3 className={styles['connect-form__header']}>{title}</h3>
+                    {isSuccess ? (
+                        <Success
+                            tel={tel}
+                            onClose={onClose}
+                            onReset={handleReset}
+                        />
+                    ) : (
+                        <>
+                            <p className={styles['connect-form__text']}>
+                                Укажите ваш номер телефона и мы свяжемся с Вами
+                                в ближайшее время
+                            </p>
+                            <div className={styles['connect-form__inputs']}>
+                                <Input
+                                    placeholder="Ваше имя"
+                                    value={name}
+                                    onChange={handleNameChange}
+                                />
+                                <Input
+                                    type="tel"
+                                    placeholder="+7"
+                                    value={tel}
+                                    error={hasErrorTel}
+                                    errorText="Неверный формат номера"
+                                    onChange={handleTelChange}
+                                    onBlur={handleTelBlur}
+                                    onFocus={handleTelFocus}
+                                />
+                                <Input
+                                    type="email"
+                                    placeholder="Ваш email"
+                                    value={email}
+                                    onChange={handleEmailChange}
+                                />
+                            </div>
+                            <Checkbox
+                                checked={policy}
+                                onChange={handlePolicyChange}
+                            >
+                                <div>
+                                    Даю согласие на{' '}
+                                    <Link
+                                        className={styles['link']}
+                                        href="/policy"
+                                    >
+                                        обработку своих персональных данных
+                                    </Link>
+                                </div>
+                            </Checkbox>
+                            {siteKey && (
+                                <ReCAPTCHA
+                                    sitekey={siteKey}
+                                    onChange={handleReCaptchaChange}
+                                />
+                            )}
+                            <Button
+                                className={styles['connect-form__button']}
+                                disabled={
+                                    !(policy && isCaptcha && !hasErrorTel)
+                                }
+                                size="l"
+                                onClick={handleFormSubmit}
+                            >
+                                Отправить
+                            </Button>
+                        </>
+                    )}
                 </div>
-                <Checkbox checked={policy} onChange={handlePolicyChange}>
-                    <div>
-                        Даю согласие на{' '}
-                        <Link className={styles['link']} href="/policy">
-                            обработку своих персональных данных
-                        </Link>
-                    </div>
-                </Checkbox>
-                <Button
-                    className={styles['connect-form__button']}
-                    size="l"
-                    onClick={handleFormSubmit}
-                >
-                    Отправить
-                </Button>
+                <IconButton
+                    className={styles['close-button']}
+                    type="cross"
+                    onClick={onClose}
+                />
             </div>
-            <IconButton
-                className={styles['close-button']}
-                type="cross"
-                onClick={onClose}
-            />
-        </div>
+        </>
     );
 }
 

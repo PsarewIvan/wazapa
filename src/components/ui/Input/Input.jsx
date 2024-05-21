@@ -1,5 +1,6 @@
 import React, { useCallback } from 'react';
 import classNames from 'classnames';
+import InputMask from 'react-input-mask';
 import CrossIcon from '@/icons/Cross';
 import styles from './Input.module.scss';
 
@@ -12,10 +13,19 @@ function Input({
     value,
     width = 'max',
     onChange,
+    onFocus,
+    onBlur,
 }) {
     const handleResetButtonClick = useCallback(() => {
         onChange('');
     }, [onChange]);
+
+    const handleInputChange = useCallback(
+        (evt) => {
+            onChange(evt.target.value);
+        },
+        [onChange]
+    );
 
     return (
         <div
@@ -24,20 +34,41 @@ function Input({
                 styles[`wrapper_width-${width}`]
             )}
         >
-            <input
-                className={classNames(
-                    styles['input'],
-                    {
-                        [styles['input_error']]: error,
-                        [styles['input_full']]: value,
-                    },
-                    className
-                )}
-                placeholder={placeholder}
-                type={type}
-                value={value}
-                onChange={onChange}
-            />
+            {type === 'tel' ? (
+                <InputMask
+                    className={classNames(
+                        styles['input'],
+                        {
+                            [styles['input_error']]: error,
+                            [styles['input_full']]: value,
+                        },
+                        className
+                    )}
+                    placeholder={placeholder}
+                    mask="+7 (999) 999-99-99"
+                    value={value}
+                    onChange={handleInputChange}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                />
+            ) : (
+                <input
+                    className={classNames(
+                        styles['input'],
+                        {
+                            [styles['input_error']]: error,
+                            [styles['input_full']]: value,
+                        },
+                        className
+                    )}
+                    placeholder={placeholder}
+                    type={type}
+                    value={value}
+                    onChange={handleInputChange}
+                    onFocus={onFocus}
+                    onBlur={onBlur}
+                />
+            )}
             {error && errorText && (
                 <span className={styles['error']}>{errorText}</span>
             )}

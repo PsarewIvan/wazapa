@@ -1,3 +1,5 @@
+@import '../../../styles/mixin';
+
 .button {
     display: inline-flex;
     align-items: center;
@@ -7,13 +9,41 @@
     border-radius: 20px;
     background-color: var(--color-darkner-8);
 
+    @include tablet {
+        height: 64px;
+        border-radius: 32px;
+        padding-left: 24px;
+        padding-right: 12px;
+        background-color: transparent;
+        color: var(--color-text-primary);
+    }
+
+    &:hover:not(.button_selected) {
+        @include tablet {
+            background-color: var(--color-darkner-4);
+
+            .button__discount {
+                background-color: var(--color-darkner-16);
+            }
+        }
+    }
+
     &_simple {
         padding-right: 12px;
+
+        @include tablet {
+            padding-right: 24px;
+        }
     }
 
     &_selected {
         background-color: var(--color-accent-700);
         color: var(--color-text-primary-invert);
+
+        @include tablet {
+            background-color: var(--color-background-primary);
+            color: var(--color-text-primary);
+        }
     }
 
     &__content {
@@ -38,5 +68,19 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 1.5;
+
+        @include tablet {
+            height: 40px;
+            padding: 8px 12px;
+            color: var(--color-text-secondary);
+        }
+
+        &_selected {
+            background-color: var(--color-error-500);
+
+            @include tablet {
+                color: var(--color-text-primary-invert);
+            }
+        }
     }
 }

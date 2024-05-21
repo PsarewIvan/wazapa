@@ -1,13 +1,13 @@
 export const TEXT = {
     header: (
         <>
-            <span>Быстрая</span> настройка.
-            <br />
+            <span>Быстрая</span> настройка. <br />
             <span>Надежная</span> интеграция.
         </>
     ),
     list: [
         {
+            id: 1,
             header: (
                 <>
                     Подключение
@@ -26,6 +26,7 @@ export const TEXT = {
             image: '/images/hero.svg',
         },
         {
+            id: 2,
             header: (
                 <>
                     Стабильная
@@ -45,6 +46,7 @@ export const TEXT = {
             image: '/images/self.svg',
         },
         {
+            id: 3,
             header: <>Круглосуточная техподдержка</>,
             text: (
                 <>

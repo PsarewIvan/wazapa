@@ -1,7 +1,11 @@
-.checkbox {
+.wrapper {
     display: flex;
     align-items: flex-start;
     gap: 12px;
+}
+
+.checkbox {
+    display: flex;
     padding: 0;
     border: none;
     background-color: transparent;
@@ -45,4 +49,11 @@
             fill: var(--color-text-primary-invert);
         }
     }
+}
+
+.error {
+    margin: 4px 0 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--color-error-500);
 }

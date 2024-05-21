@@ -1,7 +1,17 @@
+@import '../../styles/mixin';
+
 .price {
     display: flex;
     flex-direction: column;
     padding: 16px 0;
+
+    @include tablet {
+        padding: 24px 0;
+    }
+
+    @include desktop {
+        padding: 48px 0;
+    }
 
     &__header {
         margin: 0 0 12px;
@@ -9,6 +19,23 @@
         font-size: 24px;
         line-height: 32px;
         text-align: center;
+
+        @include tablet {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 32px;
+            line-height: 44px;
+            letter-spacing: -0.02em;
+
+            br {
+                display: none;
+            }
+        }
+
+        @include desktop {
+            max-width: none;
+        }
 
         span {
             color: var(--color-accent-700);
@@ -23,6 +50,20 @@
     padding: 0;
     margin: 0 0 36px;
     list-style: none;
+
+    @include tablet {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        row-gap: 12px;
+        column-gap: 24px;
+        margin-bottom: 48px;
+    }
+
+    @include desktop {
+        gap: 48px;
+    }
 
     &__item {
         display: flex;
@@ -41,5 +82,11 @@
 
     &__text {
         margin: 0;
+
+        @include tablet {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 28px;
+        }
     }
 }

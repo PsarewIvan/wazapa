@@ -27,12 +27,12 @@
         background-color: var(--color-accent-500);
         color: var(--color-text-primary-invert);
 
-        &:hover {
+        &:hover:not(:disabled) {
             outline: none;
             border-color: var(--color-accent-700);
         }
 
-        &:active {
+        &:active:not(:disabled) {
             background-color: var(--color-accent-700);
             border-color: var(--color-accent-500);
         }
@@ -47,13 +47,13 @@
         border-color: var(--color-text-secondary);
         color: var(--color-text-primary);
 
-        &:hover {
+        &:hover:not(:disabled) {
             outline: none;
             background-color: var(--color-darkner-4);
             border-color: var(--color-accent-500);
         }
 
-        &:active {
+        &:active:not(:disabled) {
             background-color: var(--color-accent-700);
             border-color: var(--color-accent-500);
             color: var(--color-text-primary-invert);

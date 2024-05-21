@@ -1,8 +1,7 @@
 @import '../../styles/mixin';
 
 .header {
-    z-index: 100;
-    position: fixed;
+    position: absolute;
     left: 0;
     display: flex;
     align-items: center;
@@ -13,21 +12,32 @@
     transition: background-color 0.3s, transform 0.2s;
 
     @include tablet {
+        max-width: 1152px;
+        left: 50%;
+        transform: translateX(-50%);
         padding: 16px 24px;
     }
 
     @include desktop {
-        padding: 16px 144px;
+        padding: 16px 0;
     }
 
     &_fixed {
         position: fixed;
         top: -64px;
         transform: translateY(0);
+
+        @include tablet {
+            top: -88px;
+        }
     }
 
     &_show {
         transform: translateY(56px);
+
+        @include tablet {
+            transform: translateY(88px);
+        }
     }
 
     &__info {

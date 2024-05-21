@@ -1,0 +1,38 @@
+@import '../../styles/mixin';
+
+.success {
+    &__text {
+        margin: 0 0 12px;
+        font-weight: 500;
+        color: var(--color-success-500);
+
+        @include tablet {
+            font-size: 20px;
+            line-height: 28px;
+        }
+    }
+
+    &__text2 {
+        margin: 0 0 48px;
+    }
+
+    &__text3 {
+        margin: 0 0 48px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__link-back {
+        display: inline;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: var(--color-link-500);
+    }
+
+    &__button-wrapper {
+        width: 160px;
+    }
+}

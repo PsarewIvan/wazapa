@@ -1,14 +1,42 @@
+@import '../../styles/mixin';
+
 .footer {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    padding: 24px 16px;
     background-color: var(--color-black);
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding: 24px 16px;
+        margin-top: auto;
+
+        @include tablet {
+            max-width: 1152px;
+            margin: 0 auto;
+            padding: 48px 24px;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 48px;
+        }
+
+        @include desktop {
+            padding: 48px 0;
+            gap: 96px;
+        }
+    }
 
     &__logo-wrapper {
         display: flex;
         flex-direction: column;
         gap: 12px;
+
+        @include tablet {
+            width: 220px;
+        }
+
+        @include desktop {
+            width: 359px;
+        }
     }
 
     &__logo {
@@ -17,6 +45,7 @@
     }
 
     &__company {
+        margin: 0;
         font-weight: 400;
         font-size: 14px;
         line-height: 20px;

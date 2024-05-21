@@ -1,9 +1,8 @@
 export const TEXT = {
     header: (
         <>
-            <span>3 канала по цене 1</span> —<br />
-            WhatsApp,
-            <br />
+            <span>3 канала по цене 1</span> — <br />
+            WhatsApp, <br />
             Telegram и ВКонтакте
         </>
     ),
@@ -28,17 +27,17 @@ export const TEXT = {
         {
             text: '3 месяца',
             discount: '-3%',
-            price: 'от 2650₽',
+            price: 'от 4800₽',
         },
         {
             text: '6 месяцев',
             discount: '-6%',
-            price: 'от 3650₽',
+            price: 'от 9300₽',
         },
         {
             text: '12 месяцев',
             discount: '-9%',
-            price: 'от 5650₽',
+            price: 'от 18000₽',
         },
     ],
 };
