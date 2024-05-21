@@ -35,7 +35,7 @@
     &__content {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        // height: 100%;
         padding: 16px 16px 52px;
 
         @include tablet {
@@ -66,8 +66,12 @@
         margin-bottom: 24px;
     }
 
+    &__captcha {
+        margin-top: 24px;
+    }
+
     &__button {
-        margin-top: auto;
+        margin-top: 24px;
     }
 }
 

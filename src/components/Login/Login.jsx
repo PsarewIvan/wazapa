@@ -1,5 +1,6 @@
 import React, { useCallback, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Input from '../ui/Input/Input';
 import Checkbox from '../ui/Checkbox';
@@ -153,12 +154,19 @@ function Login({ onClose, onConnectClick }) {
                                     </Link>
                                 </div>
                             </Checkbox>
-                            {siteKey && (
+                            {/* {siteKey && (
                                 <ReCAPTCHA
                                     sitekey={siteKey}
                                     onChange={handleReCaptchaChange}
                                 />
-                            )}
+                            )} */}
+                            <Image
+                                className={styles['login-form__captcha']}
+                                src="/images/captcha.png"
+                                alt="Captcha"
+                                width={320}
+                                height={76}
+                            />
                             <Button
                                 className={styles['login-form__button']}
                                 disabled={
