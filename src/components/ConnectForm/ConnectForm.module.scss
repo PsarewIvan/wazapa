@@ -1,6 +1,7 @@
 @import '../../styles/mixin';
 
 .connect-form {
+    overflow: auto;
     z-index: 100;
     position: fixed;
     top: 0;
@@ -35,11 +36,14 @@
     &__content {
         display: flex;
         flex-direction: column;
-        // height: 100%;
         padding: 16px 16px 52px;
 
         @include tablet {
             padding: 48px;
+        }
+
+        @media screen and (max-height: 1024px) {
+            padding-top: 0;
         }
     }
 
@@ -76,7 +80,7 @@
 }
 
 .close-button {
-    position: absolute;
+    position: fixed;
     top: 8px;
     right: 16px;
 

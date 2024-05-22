@@ -74,7 +74,10 @@ function ConnectForm({ discountTitle, onClose }) {
 
     return (
         <>
-            <div className={styles['connect-form__overlay']} />
+            <div
+                className={styles['connect-form__overlay']}
+                onClick={onClose}
+            />
             <div className={styles['connect-form']}>
                 <div className={styles['connect-form__content']}>
                     <h3 className={styles['connect-form__header']}>{title}</h3>

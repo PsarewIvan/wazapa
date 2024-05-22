@@ -92,7 +92,7 @@ function Login({ onClose, onConnectClick }) {
 
     return (
         <>
-            <div className={styles['login-form__overlay']} />
+            <div className={styles['login-form__overlay']} onClick={onClose} />
             <div className={styles['login-form']}>
                 <div className={styles['login-form__content']}>
                     <h3 className={styles['login-form__header']}>{title}</h3>

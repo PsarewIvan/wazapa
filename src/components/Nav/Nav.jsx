@@ -32,7 +32,7 @@ function Nav({ className, invert, onClick }) {
                         className={classNames(styles['nav__link'], {
                             [styles['nav__link_invert']]: invert,
                         })}
-                        href="#"
+                        href="/#crm"
                         onClick={handleLinkClick}
                     >
                         О сервисе
@@ -41,7 +41,7 @@ function Nav({ className, invert, onClick }) {
                         className={classNames(styles['nav__link'], {
                             [styles['nav__link_invert']]: invert,
                         })}
-                        href="#"
+                        href="/#price"
                         onClick={handleLinkClick}
                     >
                         Цены

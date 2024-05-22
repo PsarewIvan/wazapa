@@ -19,7 +19,7 @@ function Crm() {
     }, []);
 
     return (
-        <section className={styles['crm']}>
+        <section id="crm" className={styles['crm']}>
             <div className={styles['crm__content']}>
                 <h2 className={styles['crm__header']}>
                     Пиши прямо <br /> из{' '}

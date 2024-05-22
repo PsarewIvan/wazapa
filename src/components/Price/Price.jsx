@@ -7,7 +7,7 @@ import styles from './Price.module.scss';
 
 function Price() {
     return (
-        <section className={styles['price']}>
+        <section id="price" className={styles['price']}>
             <h2 className={styles['price__header']}>{TEXT.header}</h2>
             <ul className={styles['list']}>
                 {TEXT.list.map((item) => (

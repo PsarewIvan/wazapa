@@ -1,6 +1,7 @@
 @import '../../styles/mixin';
 
 .login-form {
+    overflow: auto;
     z-index: 100;
     position: fixed;
     top: 0;
@@ -40,6 +41,10 @@
 
         @include tablet {
             padding: 48px;
+        }
+
+        @media screen and (max-height: 1024px) {
+            padding-top: 0;
         }
     }
 
@@ -87,7 +92,7 @@
 }
 
 .close-button {
-    position: absolute;
+    position: fixed;
     top: 8px;
     right: 16px;
 
