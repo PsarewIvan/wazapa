@@ -17,7 +17,7 @@ function MobileMenu({ isOpen, onClose, onLoginClick }) {
                 <Logo />
                 <IconButton type="cross" onClick={onClose} />
             </div>
-            <Nav onClick={onClose} />
+            <Nav className={styles['menu__nav']} onClick={onClose} />
             <div className={styles['menu__button-wrapper']}>
                 <Button
                     size="l"
