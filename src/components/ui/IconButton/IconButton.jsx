@@ -8,7 +8,7 @@ function IconButton({ className, type = 'burger', onClick }) {
     const icon = useMemo(() => {
         switch (type) {
             case 'burger':
-                return <BurgerIcon />;
+                return <BurgerIcon className={styles['burger-icon']} />;
             case 'cross':
                 return <CrossIcon />;
             default:

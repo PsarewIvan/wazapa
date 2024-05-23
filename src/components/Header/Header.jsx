@@ -5,7 +5,6 @@ import { withMedia } from '../../utils/hoc/withMedia';
 import { MIN_MEDIA } from '../../utils/constants/media';
 import { useHeaderFixed } from '../../utils/hooks/useHeaderFixed';
 import { useScrollFreeze } from '@/utils/hooks/useScrollFreeze';
-import ConnectForm from '../ConnectForm';
 import Login from '../Login';
 import Phone from '../ui/Phone';
 import Button from '../ui/Button';
