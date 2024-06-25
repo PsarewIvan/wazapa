@@ -17,7 +17,11 @@ function Connect() {
         <section className={styles['connect']}>
             <h2 className={styles['connect__header']}>{TEXT.header}</h2>
             <p className={styles['connect__text']}>{TEXT.text}</p>
-            <Button size="l" onClick={handleConnectClick}>
+            <Button
+                className={styles['connect__button']}
+                size="l"
+                onClick={handleConnectClick}
+            >
                 {TEXT.button}
             </Button>
             <p className={styles['connect__promo']}>{TEXT.promo}</p>

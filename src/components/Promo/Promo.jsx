@@ -12,7 +12,11 @@ function Promo({ onButtonClick }) {
                 <h1 className={styles['promo__header']}>{TEXT.header}</h1>
                 <p className={styles['promo__text2']}>{TEXT.promo2}</p>
                 <div className={styles['promo__button-wrapper']}>
-                    <Button size="l" onClick={onButtonClick}>
+                    <Button
+                        className={styles['promo__button']}
+                        size="l"
+                        onClick={onButtonClick}
+                    >
                         {TEXT.button}
                     </Button>
                     <p className={styles['promo__text3']}>

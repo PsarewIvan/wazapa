@@ -78,8 +78,21 @@
     &__button-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        width: max-content;
+        align-items: flex-start;
+        width: 100%;
+
+        @include tablet {
+            width: max-content;
+            align-items: center;
+        }
+    }
+
+    &__button {
+        width: 100%;
+
+        @include tablet {
+            width: max-content;
+        }
     }
 
     &__text3 {

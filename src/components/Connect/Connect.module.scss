@@ -56,6 +56,14 @@
         }
     }
 
+    &__button {
+        width: 100%;
+
+        @include tablet {
+            width: max-content;
+        }
+    }
+
     &__promo {
         margin-top: 12px;
     }
