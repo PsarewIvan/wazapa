@@ -354,6 +354,481 @@ function Offer() {
             <p>БИК 044525593,</p>
             <p>к/с 30101810200000000593 в ГУ Банка России по ЦФО.</p>
 
+            <div>
+                <h2 className={styles['table-title']}>
+                    Приложение № 1<span>к договору публичной оферты</span>
+                </h2>
+                <h3 className={styles['table-sub-title']}>Перечень лицензий</h3>
+                <div className={styles['table']}>
+                    <div className={styles['thead']}>
+                        <div className={styles['tr']}>
+                            <div className={styles['th']}>№</div>
+                            <div className={styles['th']}>Название</div>
+                            <div className={styles['th']}>Цена</div>
+                            <div className={styles['th']}>Срок</div>
+                        </div>
+                    </div>
+                    <div className={styles['tbody']}>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    1
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>1650 ₽</div>
+                                <div className={styles['td']}>1 месяц</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    2
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>4800 ₽</div>
+                                <div className={styles['td']}>3 месяца</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    3
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>9300 ₽</div>
+                                <div className={styles['td']}>6 месяцев</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    4
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>18000 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    5
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления + Бот 1
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>2100 ₽</div>
+                                <div className={styles['td']}>1 месяц</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    6
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления + Бот 1
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>6000 ₽</div>
+                                <div className={styles['td']}>3 месяца</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    7
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления + Бот 1
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>11000 ₽</div>
+                                <div className={styles['td']}>6 месяцев</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    8
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления + Бот 1
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>23000 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    9
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления + Бот 2
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>2500 ₽</div>
+                                <div className={styles['td']}>1 месяц</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    10
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления + Бот 2
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>7000 ₽</div>
+                                <div className={styles['td']}>3 месяца</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    11
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления + Бот 2
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>13500 ₽</div>
+                                <div className={styles['td']}>6 месяцев</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    12
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления + Бот 2
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>25000 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    13
+                                </div>
+                                <div className={styles['td']}>
+                                    Массовые рассылки
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>2600 ₽</div>
+                                <div className={styles['td']}>1 месяц</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    14
+                                </div>
+                                <div className={styles['td']}>
+                                    Массовые рассылки
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>5900 ₽</div>
+                                <div className={styles['td']}>3 месяца</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    15
+                                </div>
+                                <div className={styles['td']}>
+                                    Массовые рассылки
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>12000 ₽</div>
+                                <div className={styles['td']}>6 месяцев</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    16
+                                </div>
+                                <div className={styles['td']}>
+                                    Массовые рассылки
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>20000 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    22
+                                </div>
+                                <div className={styles['td']}>
+                                    Интеграция с amoCRM (уведомления)
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>700 ₽</div>
+                                <div className={styles['td']}>1 месяц</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    23
+                                </div>
+                                <div className={styles['td']}>
+                                    Интеграция с amoCRM (интеграция с CRM +
+                                    уведомления)
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>1000 ₽</div>
+                                <div className={styles['td']}>1 месяц</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    24
+                                </div>
+                                <div className={styles['td']}>
+                                    Интеграция с Битрикс (уведомления)
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>700 ₽</div>
+                                <div className={styles['td']}>1 месяц</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    25
+                                </div>
+                                <div className={styles['td']}>
+                                    Интеграция с Битрикс (интеграция с CRM +
+                                    уведомления)
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>1000 ₽</div>
+                                <div className={styles['td']}>1 месяц</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    17
+                                </div>
+                                <div className={styles['td']}>Бот Маяк 1</div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>1200 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    18
+                                </div>
+                                <div className={styles['td']}>Бот Маяк 3</div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>2600 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    19
+                                </div>
+                                <div className={styles['td']}>Бот Маяк 5</div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>6300 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    20
+                                </div>
+                                <div className={styles['td']}>
+                                    Бот Маяк безлимит
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>8600 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    21
+                                </div>
+                                <div className={styles['td']}>
+                                    Бот Маяк безлимит бесплатно на 7 дней
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>0 ₽</div>
+                                <div className={styles['td']}>7 дней</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    26
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления для Картотеки
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>4200 ₽</div>
+                                <div className={styles['td']}>6 месяцев</div>
+                            </div>
+                        </div>
+                        <div className={styles['tr']}>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>
+                                    <span className={styles['td_mobile']}>
+                                        Лицензия №{' '}
+                                    </span>
+                                    27
+                                </div>
+                                <div className={styles['td']}>
+                                    Триггерные уведомления для Картотеки
+                                </div>
+                            </div>
+                            <div className={styles['tr-block']}>
+                                <div className={styles['td']}>5900 ₽</div>
+                                <div className={styles['td']}>1 год</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className={styles['table-date']}>01 сентября / 2021</div>
+
             <div className={styles['contact']}>
                 <p>По всем вопросам свяжитесь с нами:</p>
                 <a

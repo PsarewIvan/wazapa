@@ -89,6 +89,161 @@
             background-color: var(--color-text-primary);
         }
     }
+
+    .table-title {
+        margin-top: 72px;
+        font-size: 24px;
+        line-height: 32px;
+
+        span {
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .table-sub-title {
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+    .table {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .thead {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .th {
+        padding: 12px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.16);
+
+        &:nth-child(1) {
+            width: 6.25%;
+        }
+
+        &:nth-child(2) {
+            width: 66.67%;
+        }
+
+        &:nth-child(3) {
+            width: 12.5%;
+        }
+
+        &:nth-child(4) {
+            width: 14.58%;
+        }
+    }
+
+    .tbody {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tr {
+        display: flex;
+
+        &:not(:last-of-type) {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+        }
+    }
+
+    .tr-block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 100%;
+        padding: 12px;
+
+        @include tablet {
+            flex-direction: row;
+            padding: 0;
+            gap: 0;
+        }
+
+        &:nth-child(1) {
+            .td:first-child {
+                font-size: 14px;
+                line-height: 20px;
+                color: rgba(39, 38, 44, 0.72);
+
+                @include tablet {
+                    width: 8.57%;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: rgba(39, 38, 44, 1);
+                }
+            }
+
+            .td:last-child {
+                @include tablet {
+                    width: 91.43%;
+                }
+            }
+
+            @include tablet {
+                width: 72.92%;
+            }
+        }
+
+        &:nth-child(2) {
+            width: 96px;
+            flex-shrink: 0;
+            flex-direction: column-reverse;
+
+            @include tablet {
+                flex-direction: row;
+                padding: 0;
+                gap: 0;
+                width: 27.08%;
+            }
+
+            .td:first-child {
+                @include tablet {
+                    width: 46.15%;
+                }
+            }
+
+            .td:last-child {
+                font-size: 14px;
+                line-height: 20px;
+                color: rgba(39, 38, 44, 0.72);
+
+                @include tablet {
+                    width: 53.85%;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: rgba(39, 38, 44, 1);
+                }
+            }
+        }
+    }
+
+    .td {
+        &_mobile {
+            @include tablet {
+                display: none;
+            }
+        }
+
+        @include tablet {
+            padding: 12px;
+        }
+    }
+
+    .table-date {
+        margin-top: 24px;
+        font-size: 14px;
+        line-height: 20px;
+        color: rgba(39, 38, 44, 0.72);
+    }
 }
 
 .nav {
