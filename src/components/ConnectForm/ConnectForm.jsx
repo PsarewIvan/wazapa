@@ -138,7 +138,7 @@ function ConnectForm({ discountTitle, onClose }) {
                             )} */}
                             <Image
                                 className={styles['connect-form__captcha']}
-                                src="/images/captcha.png"
+                                src="images/captcha.png"
                                 alt="Captcha"
                                 width={320}
                                 height={76}

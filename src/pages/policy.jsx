@@ -3,7 +3,13 @@ import Link from 'next/link';
 import { EMAIL, EMAIL_HELLO } from '@/constants';
 import styles from '../styles/Pages.module.scss';
 
-function Policy() {
+export async function getStaticProps() {
+    return {
+        props: {},
+    };
+}
+
+export default function Policy() {
     return (
         <div className={styles['main']}>
             <div className={styles['nav']}>
@@ -206,5 +212,3 @@ function Policy() {
         </div>
     );
 }
-
-export default Policy;

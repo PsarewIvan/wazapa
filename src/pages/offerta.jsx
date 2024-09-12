@@ -3,7 +3,13 @@ import Link from 'next/link';
 import { EMAIL, EMAIL_HELLO } from '@/constants';
 import styles from '../styles/Pages.module.scss';
 
-function Offer() {
+export async function getStaticProps() {
+    return {
+        props: {},
+    };
+}
+
+export default function Offer() {
     return (
         <div className={styles['main']}>
             <div className={styles['nav']}>
@@ -842,5 +848,3 @@ function Offer() {
         </div>
     );
 }
-
-export default Offer;

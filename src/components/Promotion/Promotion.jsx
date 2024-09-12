@@ -31,7 +31,7 @@ function Promotion() {
                 <div className={styles['promotion__image-wrapper']}>
                     <Image
                         className={styles['promotion__image']}
-                        src="/images/promotion.svg"
+                        src="images/promotion.svg"
                         alt="Promotion"
                         fill
                         priority

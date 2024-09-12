@@ -1,7 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@font-face {
+    font-family: 'Rubik';
+    src: url('/fonts/Rubik.ttf');
+    src: local('Rubik'), local('Rubik'),
+        url('/fonts/Rubik.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
 
 @import './mixin.scss';
 @import './colors.scss';
+@import './slider.scss';
 
 *,
 *::after,
@@ -33,6 +41,7 @@ button {
 }
 
 .main {
+    overflow: hidden;
     position: relative;
     margin-top: 64px;
     padding: 0 16px 0;

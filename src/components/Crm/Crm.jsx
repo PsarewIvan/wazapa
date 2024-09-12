@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import { TEXT } from './text';
 import styles from './Crm.module.scss';
 
-const AMO_IMAGE = '/images/amoCRM.png';
-const BITRIX_IMAGE = '/images/bitrix24.png';
+const AMO_IMAGE = 'images/amoCRM.png';
+const BITRIX_IMAGE = 'images/bitrix24.png';
 
 function Crm() {
     const [image, setImage] = useState(BITRIX_IMAGE);

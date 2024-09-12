@@ -21,7 +21,7 @@ export const TEXT = {
                     IT-шников
                 </>
             ),
-            image: '/images/hero.svg',
+            image: 'images/hero.svg',
         },
         {
             id: 2,
@@ -38,7 +38,7 @@ export const TEXT = {
                     связи со своими клиентами
                 </>
             ),
-            image: '/images/self.svg',
+            image: 'images/self.svg',
         },
         {
             id: 3,
@@ -50,7 +50,7 @@ export const TEXT = {
                     персональном чате или по телефону
                 </>
             ),
-            image: '/images/tel.svg',
+            image: 'images/tel.svg',
         },
     ],
 };

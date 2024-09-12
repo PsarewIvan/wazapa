@@ -3,7 +3,13 @@ import Link from 'next/link';
 import { EMAIL_HELLO } from '@/constants';
 import styles from '../styles/Pages.module.scss';
 
-function Payments() {
+export async function getStaticProps() {
+    return {
+        props: {},
+    };
+}
+
+export default function Payments() {
     return (
         <div className={styles['main']}>
             <div className={styles['nav']}>
@@ -33,5 +39,3 @@ function Payments() {
         </div>
     );
 }
-
-export default Payments;

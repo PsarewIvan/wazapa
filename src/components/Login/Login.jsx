@@ -162,7 +162,7 @@ function Login({ onClose, onConnectClick }) {
                             )} */}
                             <Image
                                 className={styles['login-form__captcha']}
-                                src="/images/captcha.png"
+                                src="images/captcha.png"
                                 alt="Captcha"
                                 width={320}
                                 height={76}
