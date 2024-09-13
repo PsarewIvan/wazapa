@@ -30,7 +30,7 @@ function Promo({ onButtonClick }) {
                     className={styles['promo__image']}
                     fill
                     priority
-                    src="images/main.jpg"
+                    src="images/main.png"
                 />
             </div>
         </section>
