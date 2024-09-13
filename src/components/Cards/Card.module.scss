@@ -11,7 +11,7 @@
         width: 221px;
     }
 
-    &:nth-child(1n) {
+    &_1 {
         background-color: rgba(39, 191, 171, 0.24);
 
         .card__index {
@@ -19,7 +19,7 @@
         }
     }
 
-    &:nth-child(2n) {
+    &_2 {
         background-color: rgba(39, 191, 171, 0.12);
 
         .card__index {
@@ -27,7 +27,7 @@
         }
     }
 
-    &:nth-child(3n) {
+    &_3 {
         background-color: rgba(39, 191, 171, 0.36);
 
         .card__index {
@@ -35,7 +35,7 @@
         }
     }
 
-    &:nth-child(4n) {
+    &_4 {
         background-color: rgba(39, 191, 171, 0.12);
 
         .card__index {
@@ -43,7 +43,7 @@
         }
     }
 
-    &:nth-child(5n) {
+    &_5 {
         background-color: rgba(26, 127, 114, 1);
 
         .card__index {
@@ -60,6 +60,8 @@
     }
 
     &__content {
+        position: relative;
+        z-index: 1;
     }
 
     &__index {
