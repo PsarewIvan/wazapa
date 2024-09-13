@@ -46,6 +46,14 @@
     &_5 {
         background-color: rgba(26, 127, 114, 1);
 
+        .card__title {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        .card__content {
+            color: rgba(255, 255, 255, 1);
+        }
+
         .card__index {
             color: rgba(255, 255, 255, 0.32);
         }
