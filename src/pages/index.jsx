@@ -8,6 +8,7 @@ import Price from '../components/Price';
 import Promotion from '../components/Promotion';
 import Connect from '../components/Connect';
 import ConnectForm from '@/components/ConnectForm';
+import FeedbackForm from '@/components/FeedbackForm';
 import { useScrollFreeze } from '@/utils/hooks/useScrollFreeze';
 
 export async function getStaticProps() {
@@ -17,20 +18,30 @@ export async function getStaticProps() {
 }
 
 export default function Index() {
-    const router = useRouter();
     const [hasConnect, setHasConnect] = useState(false);
-    useScrollFreeze(hasConnect);
+    const [hasFeedback, setHasFeedback] = useState(false);
+
+    const router = useRouter();
+    useScrollFreeze(hasConnect || hasFeedback);
 
     useEffect(() => {
-        const { reg } = router.query;
+        const { reg, feedback } = router.query;
 
         if (reg === 'true') {
             setHasConnect(true);
+        }
+
+        if (feedback === 'true') {
+            setHasFeedback(true);
         }
     }, [router.query]);
 
     const handleConnectClick = useCallback(() => {
         setHasConnect((prev) => !prev);
+    }, []);
+
+    const handleFeedbackClick = useCallback(() => {
+        setHasFeedback((prev) => !prev);
     }, []);
 
     return (
@@ -43,6 +54,7 @@ export default function Index() {
             <Promotion />
             <Connect />
             {hasConnect && <ConnectForm onClose={handleConnectClick} />}
+            {hasFeedback && <FeedbackForm onClose={handleFeedbackClick} />}
         </>
     );
 }

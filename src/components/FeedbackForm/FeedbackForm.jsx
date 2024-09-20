@@ -3,18 +3,20 @@ import Link from 'next/link';
 import Image from 'next/image';
 import ReCAPTCHA from 'react-google-recaptcha';
 import Input from '../ui/Input/Input';
+import Textarea from '../ui/Textarea';
 import Checkbox from '../ui/Checkbox';
 import Button from '../ui/Button';
 import IconButton from '../ui/IconButton';
 import SuccessForm from '../SuccessForm';
-import styles from './ConnectForm.module.scss';
+import styles from './FeedbackForm.module.scss';
 
 const siteKey = process.env.RE_CAPTCHA_SITE_KEY;
 
-function ConnectForm({ discountTitle, onClose }) {
+function FeedbackForm({ onClose }) {
     const [name, setName] = useState('');
     const [tel, setTel] = useState('');
     const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
     const [policy, setPolicy] = useState(false);
     const [isCaptcha, setIsCaptcha] = useState(false);
     const [hasErrorTel, setErrorTel] = useState(false);
@@ -30,6 +32,10 @@ function ConnectForm({ discountTitle, onClose }) {
 
     const handleEmailChange = useCallback((value) => {
         setEmail(value);
+    }, []);
+
+    const handleMessageChange = useCallback((value) => {
+        setMessage(value);
     }, []);
 
     const handlePolicyChange = useCallback(() => {
@@ -62,15 +68,12 @@ function ConnectForm({ discountTitle, onClose }) {
         setName('');
         setTel('');
         setEmail('');
+        setMessage('');
         setPolicy(false);
         setIsCaptcha(false);
         setErrorTel(false);
         setIsSuccess(false);
     }, []);
-
-    const title = discountTitle
-        ? 'Узнать о действующих акциях и скидках'
-        : 'Подключиться бесплатно';
 
     return (
         <>
@@ -80,7 +83,9 @@ function ConnectForm({ discountTitle, onClose }) {
             />
             <div className={styles['connect-form']}>
                 <div className={styles['connect-form__content']}>
-                    <h3 className={styles['connect-form__header']}>{title}</h3>
+                    <h3 className={styles['connect-form__header']}>
+                        {'Напишите нам'}
+                    </h3>
                     {isSuccess ? (
                         <SuccessForm
                             tel={tel}
@@ -90,8 +95,9 @@ function ConnectForm({ discountTitle, onClose }) {
                     ) : (
                         <>
                             <p className={styles['connect-form__text']}>
-                                Укажите ваш номер телефона и мы свяжемся с Вами
-                                в ближайшее время
+                                {
+                                    'Напишите сообщение, укажите ваши контактные данные и мы свяжемся с Вами в ближайшее время'
+                                }
                             </p>
                             <div className={styles['connect-form__inputs']}>
                                 <Input
@@ -114,6 +120,11 @@ function ConnectForm({ discountTitle, onClose }) {
                                     placeholder="Ваш email"
                                     value={email}
                                     onChange={handleEmailChange}
+                                />
+                                <Textarea
+                                    placeholder="Текст сообщения"
+                                    value={message}
+                                    onChange={handleMessageChange}
                                 />
                             </div>
                             <Checkbox
@@ -166,4 +177,4 @@ function ConnectForm({ discountTitle, onClose }) {
     );
 }
 
-export default ConnectForm;
+export default FeedbackForm;

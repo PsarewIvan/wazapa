@@ -1,0 +1,96 @@
+@import '../../styles/mixin';
+
+.connect-form {
+    overflow: auto;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding-top: 64px;
+    background-color: var(--color-white);
+
+    @include tablet {
+        left: auto;
+        width: 480px;
+        padding-top: 96px;
+    }
+
+    &__overlay {
+        display: none;
+
+        @include tablet {
+            z-index: 10;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            content: '';
+            display: block;
+            background-color: var(--color-darkner-48);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        padding: 16px 16px 52px;
+
+        @include tablet {
+            padding: 48px;
+        }
+
+        @media screen and (max-height: 1024px) {
+            padding-top: 0;
+        }
+    }
+
+    &__header {
+        margin: 0 0 12px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 32px;
+
+        @include tablet {
+            font-size: 32px;
+            line-height: 44px;
+        }
+    }
+
+    &__text {
+        margin: 0 0 24px;
+    }
+
+    &__inputs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    &__captcha {
+        margin-top: 24px;
+    }
+
+    &__button {
+        margin-top: 24px;
+    }
+}
+
+.close-button {
+    position: fixed;
+    top: 8px;
+    right: 16px;
+
+    @include tablet {
+        top: 24px;
+        right: 24px;
+    }
+}
+
+.link {
+    color: var(--color-link-500);
+    text-decoration: none;
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from '../ui/Button';
-import styles from './Success.module.scss';
+import styles from './SuccessForm.module.scss';
 
-function Success({ tel, onClose, onReset }) {
+function SuccessForm({ tel, onClose, onReset }) {
     return (
         <>
             <p className={styles['success__text']}>
@@ -39,4 +39,4 @@ function Success({ tel, onClose, onReset }) {
     );
 }
 
-export default Success;
+export default SuccessForm;
